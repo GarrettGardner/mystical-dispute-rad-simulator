@@ -16,9 +16,8 @@ export default function SectionHeader(props: ISectionHeaderProps) {
           <p className="text--header-version">Version 1.1</p>
           <p className="text--header-description">
             The Reasonable, Acceptable Draw (R.A.D.) simulator takes a simplified Magic deck as input
-            and simulates reasonable draws as defined by the game stage checks below. Check out the
-            <a href="https://github.com/GarrettGardner/mystical-dispute-rad-simulator" target="_blank" rel="noreferrer noopener">source code</a>
-            on GitHub.
+            and simulates reasonable draws as defined by the game stage checks below. Check out
+            the <a href="https://github.com/GarrettGardner/mystical-dispute-rad-simulator" target="_blank" rel="noreferrer noopener">source code</a> on GitHub.
           </p>
           <div className="tools">
             <button type="button" className="button button--outline button--sm" onClick={() => props.clear()} disabled={props.inputDisabled}>Clear</button>

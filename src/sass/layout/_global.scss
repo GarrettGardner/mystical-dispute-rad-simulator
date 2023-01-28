@@ -82,6 +82,10 @@ input::-webkit-inner-spin-button {
     font-size: rem(20px);
     margin-bottom: rem(24px);
   }
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 .text--header-section {
