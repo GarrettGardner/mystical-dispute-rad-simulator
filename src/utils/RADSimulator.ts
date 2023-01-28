@@ -3,35 +3,6 @@ import { DEFAULT_RAD_OUTPUT } from "./defaults";
 
 const ITERATIONS = 10000;
 
-interface ICheckProps {
-  cards: ICard[],
-  draws: number,
-  minLand: number,
-  maxLand: number,
-  minPlayable: number,
-  playableChecks: (keyof ICard)[],
-  minInteraction: number,
-  minBomb: number
-}
-
-interface ICheckReturn {
-  success: boolean,
-  minLandSuccess: boolean,
-  maxLandSuccess: boolean,
-  minPlayableSuccess: boolean,
-  minInteractionSuccess: boolean,
-  minBombSuccess: boolean
-}
-
-const DEFAULT_CHECK_RETURN: ICheckReturn = {
-  success: true,
-  minLandSuccess: true,
-  maxLandSuccess: true,
-  minPlayableSuccess: true,
-  minInteractionSuccess: true,
-  minBombSuccess: true
-}
-
 interface ICheckAccessToColorsReturn {
   white: boolean,
   blue: boolean,
