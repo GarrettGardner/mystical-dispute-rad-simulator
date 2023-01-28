@@ -1,0 +1,58 @@
+.section-header {
+  border-bottom: 1px solid color("white");
+  margin-bottom: rem(24px);
+  padding-bottom: rem(24px);
+
+  @include breakpoint("desktop") {
+    margin-bottom: rem(48px);
+    padding-bottom: rem(48px);
+  }
+
+  .row--header {
+    .col--title {
+      margin-bottom: rem(32px);
+      
+      @include breakpoint("tablet") {
+        margin: 0;
+        width: 70%;
+      }
+      
+      @include breakpoint("desktop") {
+        width: 60%;
+      }
+    }
+
+    .col--mystical-dispute {
+      @include breakpoint("tablet") {
+        width: 30%;
+      }
+
+      @include breakpoint("desktop") {
+        margin-left: 15%;
+        width: 25%;
+      }
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    margin: 0 auto rem(8px);
+    width: rem(120px);
+    max-width: 100%;
+
+    @include breakpoint("tablet") {
+      width: rem(240px);
+    }
+
+    @include breakpoint("desktop") {
+      width: rem(240px);
+    }
+  }
+
+  .tools {
+    .button {
+      margin: 0 rem(8px) rem(8px) 0;
+    }
+  }
+}

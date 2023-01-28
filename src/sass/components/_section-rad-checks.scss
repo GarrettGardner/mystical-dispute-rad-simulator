@@ -1,0 +1,58 @@
+.section-rad-checks {
+  padding-bottom: rem(48px);
+
+  @include breakpoint("desktop") {
+    padding-bottom: rem(96px);
+  }
+
+  .row--checks {
+    @include breakpoint("tablet") {
+      margin-bottom: rem(32px);
+    }
+
+    @include breakpoint("desktop") {
+      margin-bottom: rem(64px);
+    }
+
+    .col {
+      margin-bottom: rem(24px);
+
+      @include breakpoint("tablet") {
+        margin-bottom: 0;
+        width: 50%;
+      }
+
+      @include breakpoint("desktop") {
+        width: 25%;
+      }
+    }
+  }
+
+  .input {
+    align-items: center;
+    display: flex;
+    margin-bottom: rem(4px);
+
+    @include breakpoint("desktop") {
+      margin-bottom: rem(8px);
+    }
+
+    input {
+      width: rem(32px);
+
+      @include breakpoint("desktop") {
+        width: rem(48px);
+      }
+    }
+  }
+
+  .label {
+    font-size: rem(16px);
+    padding-left: rem(6px);
+
+    @include breakpoint("desktop") {
+      font-size: rem(18px);
+      padding-left: rem(8px);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* Colors */
+$colors: (
+  "white":            #ffffff,
+  "black":            #000000,
+  "gray-dark":        #303030,
+  "gray":             #808080,
+  "gray-light":       #a0a0a0,
+  "orange":           #ff8c00,
+  "green":            #8AC926,
+  "red":              #DE1A1A,
+);
+
+/* Fonts */
+$fonts: (
+  "body": "'Nunito', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+);
+
+/* Breakpoints */
+$breakpoints: (
+  "tablet":  576px,
+  "desktop":  1200px,
+);
+
+/* Container Widths */
+$widths: (
+  "mobile":  360px,
+  "tablet":  532px,
+  "desktop":  1140px,
+);

@@ -1,0 +1,100 @@
+.section-results {
+  .bar {
+    background: color("red");
+    border: rem(2px) solid color("gray-dark");
+    border-radius: rem(24px);
+    height: rem(48px);
+    margin-bottom: rem(16px);
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint("desktop") {
+      border-width: rem(4px);
+      border-radius: rem(32px);
+      height: rem(64px);
+      margin-bottom: rem(24px);
+    }
+
+    &::after {
+      background: linear-gradient(to bottom, rgba(color("black"), 0.25), rgba(color("black"), 0.45));
+      content: "";
+      height: 40%;
+      left: 0;
+      position: absolute;
+      top: 60%;
+      width: 100%;
+    }
+
+    .fill {
+      background: color("green");
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 0;
+    }
+  }
+
+  p.text--percentage {
+    font-size: rem(48px);
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+
+    @include breakpoint("desktop") {
+      font-size: rem(64px);
+    }
+  }
+
+  p.text--total {
+    font-weight: 400;
+    letter-spacing: rem(2px);
+    font-size: rem(16px);
+    margin-bottom: rem(32px);
+    text-align: center;
+
+    @include breakpoint("desktop") {
+      font-size: rem(20px);
+      letter-spacing: rem(3px);
+      margin-bottom: rem(64px);
+    }
+  }
+
+  .row--results {
+    @include breakpoint("desktop") {
+      margin-bottom: rem(48px);
+    }
+
+    .col {
+      margin-bottom: rem(16px);
+
+      @include breakpoint("tablet") {
+        width: 50%;
+      }
+
+      @include breakpoint("desktop") {
+        margin-bottom: 0;
+        width: 25%;
+      }
+    }
+  }
+
+  .result {
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: rem(4px);
+
+    .percentage {
+      font-size: rem(20px);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .label {
+      font-size: rem(14px);
+      font-weight: 300;
+      line-height: 1;
+      margin-left: rem(4px);
+    }
+  }
+}

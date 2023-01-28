@@ -1,0 +1,227 @@
+.section-deck {
+  border-bottom: 1px solid color("white");
+  margin-bottom: rem(24px);
+  padding-bottom: rem(24px);
+
+  @include breakpoint("desktop") {
+    margin-bottom: rem(48px);
+    padding-bottom: rem(48px);
+  }
+
+  .text--header-section {
+    margin-bottom: rem(4px);
+
+    @include breakpoint("desktop") {
+      margin-bottom: rem(8px);
+    }
+  }
+
+  .row--deck {
+    align-items: flex-start;
+
+    .col {
+      margin-bottom: rem(16px);
+
+      @include breakpoint("tablet") {
+        width: 50%;
+      }
+  
+      @include breakpoint("desktop") {
+        margin: 0;
+        width: 25%;
+      }
+    }
+  }
+  
+  .cards {
+    align-items: center;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    left: -#{rem(2px)};
+    overflow: hidden;
+    width: calc(100% + rem(4px));
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    padding: 0 rem(2px) rem(4px);
+    position: relative;
+    width: 20%;
+  
+    .card__inner {
+      background:  rgb(120,118,125);
+      border: 1px solid color("black");
+      border-radius: 6%;
+      cursor: pointer;
+      display: block;
+      height: 0;
+      padding-top: 140%;
+      position: relative;
+      width: 100%;
+  
+      &::before {
+        background: rgba(color("black"),0.35);
+        border: 2px solid rgba(color("black"),0.65);
+        border-right-color: rgba(color("white"),0.25);
+        border-top-color: rgba(color("white"),0.25);
+        border-radius: 4%;
+        content: "";
+        height: 42%;
+        left: 6%;
+        position: absolute;
+        top: 6%;
+        width: 88%;
+      }
+  
+      &::after {
+        background: rgba(color("white"),0.35);
+        border-radius: 4%;
+        border: 2px solid rgba(color("white"),0.25);
+        border-right-color: rgba(color("black"),0.65);
+        border-top-color: rgba(color("black"),0.65);
+        content: "";
+        height: 42%;
+        left: 6%;
+        position: absolute;
+        top: 53%;
+        width: 88%;
+      }
+    }
+  
+    &.card--color-colorless {
+      .card__inner {
+        background: rgb(120,118,125);
+      }
+    }
+  
+    &.card--color-white {
+      .card__inner {
+        background: rgb(245,239,210);
+      }
+    }
+  
+    &.card--color-blue {
+      .card__inner {
+        background: rgb(78,162,205);
+      }
+    }
+  
+    &.card--color-black {
+      .card__inner {
+        background: rgb(117,76,134);
+      }
+    }
+  
+    &.card--color-red {
+      .card__inner {
+        background:rgb(189,54,53);
+      }
+    }
+  
+    &.card--color-green {
+      .card__inner {
+        background: rgb(157,192,59);
+      }
+    }
+    
+    &.card--color-gold {
+      .card__inner {
+        background: rgb(201,155,40);
+      }
+    }
+  
+    .card__colors {
+      align-items: center;
+      display: flex;
+      height: 12%;
+      position: absolute;
+      left: 2%;
+      top: 1%;
+      justify-content: flex-end;
+      width: 96%;
+
+      .icon {
+        display: block;
+        flex: 0 1 auto;
+        width: 25%;
+      }
+    }
+  
+    .card__type {
+      align-items: center;
+      color: color("black");
+      display: flex;
+      height: 40%;
+      position: absolute;
+      left: 6%;
+      top: 6%;
+      justify-content: center;
+      line-height: 1;
+      width: 88%;
+
+      .icon {
+        display: block;
+        flex: 0 1 auto;
+        width: 40%;
+      }
+    }
+  
+    .card__flags {
+      align-items: center;
+      color: color("black");
+      display: flex;
+      position: absolute;
+      height: 38%;
+      left: 6%;
+      top: 56%;
+      text-align: center;
+      font-size: rem(14px);
+      line-height: 1;
+      justify-content: center;
+      width: 88%;
+      z-index: 102;
+      
+      .icon {
+        display: block;
+        flex: 0 1 auto;
+        width: 40%;
+      }
+    }
+  
+    .card__delete {
+      background: color("red");
+      border: 1px solid color("white");
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: rem(16px);
+      
+      .card__delete__inner {
+        font-size: rem(8px);
+        height: 0;
+        padding-top: 100%;
+  
+        .icon {
+          color: color("white");
+          height: 80%;
+          left: 10%;
+          position: absolute;
+          top: 10%;
+          width: 80%;
+        }
+      }
+    }
+  
+    &:hover,
+    &:focus {
+      .card__delete {
+        display: block;
+      }
+    }
+  }
+}

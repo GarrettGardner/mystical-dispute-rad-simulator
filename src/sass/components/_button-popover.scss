@@ -1,0 +1,15 @@
+.button-popover {
+  color: color("white");
+  cursor: pointer;
+  display: inline-block;
+  font-size: rem(18px); 
+  line-height: 1;
+  margin-left: rem(8px);
+  padding: 0;
+  vertical-align: middle;
+
+  @include breakpoint("desktop") {
+    font-size: rem(24px); 
+    margin-left: rem(8px);
+  }
+}

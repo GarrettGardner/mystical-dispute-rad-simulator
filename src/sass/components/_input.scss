@@ -1,0 +1,63 @@
+input[type="radio"],
+input[type="checkbox"] {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+
+  & + label {
+    align-items: center;
+    background: color("black");
+    border: rem(2px) solid color("white");
+    border-radius: rem(8px);
+    cursor: pointer;
+    display: flex;
+    font-size: rem(14px);
+    font-weight: 900;
+    color: color("white");
+    justify-content: center;
+    padding: rem(8px);
+    text-align: center;
+    text-transform: uppercase;
+
+    .icon {
+      font-size: rem(24px);
+      margin-right: rem(8px);
+    }
+  }
+
+  &:checked + label {
+    background: color("white");
+    color: color("black");
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"],
+input[type="text"] {
+  background: color("white");
+  border-radius: rem(8px);
+  color: color("black");
+  font-size: rem(18px);
+  font-weight: 900;
+  line-height: 1;
+  padding: rem(2px);
+  text-align: center;
+  width: 100%;
+
+  @include breakpoint("desktop") {
+    border-radius: rem(12px);
+    font-size: rem(24px);
+    padding: rem(4px);
+  }
+
+  &:disabled {
+    background: color('gray-light');
+  }
+}

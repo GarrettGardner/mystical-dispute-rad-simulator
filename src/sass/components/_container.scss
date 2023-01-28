@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  max-width: width("mobile");
+  padding: rem(32px) rem(16px);
+  position: relative;
+
+  @include breakpoint("tablet") {
+    max-width: none;
+    padding: rem(32px) 0;
+    width: width("tablet");
+  }
+
+  @include breakpoint("desktop") {
+    padding: rem(48px) 0;
+    width: width("desktop");
+  }
+}

@@ -1,0 +1,43 @@
+@use "sass:math";
+
+@function getMap($map: "colors", $value: "white") {
+  @if map-has-key($map, $value) {
+    @return map-get($map, $value);
+  }
+
+  @warn "Map value could not be retrieved: `#{$value}`.";
+  @return null;
+}
+
+@function rem($size) {
+  @if $size == 0 {
+    @return 0rem;
+  }
+  @else {
+    $remSize: math.div($size, 16px);
+    @return #{$remSize}rem;
+  }
+}
+
+@function color($color: "white") {
+  @return getMap($colors, $color);
+}
+
+@function font($font: "primary") {
+  @return unquote(getMap($fonts, $font));
+}
+
+@function width($width: "tablet") {
+  @return getMap($widths, $width);
+}
+
+@mixin breakpoint($breakpoint: "tablet", $direction: "min-width") {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media only screen and ($direction: rem(map-get($breakpoints, $breakpoint))) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Breakpoint value could not be retrieved: `#{$breakpoint}`.";
+  }
+}

@@ -1,0 +1,20 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  left: -#{rem(16px)};
+  justify-content: center;
+  margin-bottom: rem(16px);
+  overflow: hidden;
+  position: relative;
+  width: calc(100% + rem(32px));
+
+  @include breakpoint("desktop") {
+    margin-bottom: 0;
+  }
+
+  .col {
+    flex: 0 0 auto;
+    padding: 0 rem(16px);
+    width: 100%;
+  }
+}

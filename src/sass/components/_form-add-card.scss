@@ -1,0 +1,93 @@
+.form-add-card {
+  .option-group {
+    margin-bottom: rem(32px);
+
+    @include breakpoint("desktop") {
+      align-items: stretch;
+      display: flex;
+      gap: rem(16px);
+      width: 100%;
+      margin-bottom: rem(48px);
+    }
+
+    .option {
+      flex: 1 1 auto;
+      margin-bottom: rem(16px);
+      width: 100%;
+
+      @include breakpoint("desktop") {
+        margin: 0;
+      }
+    }
+  }
+
+  .flag {
+    display: flex;
+    margin-bottom: rem(16px);
+
+    @include breakpoint("desktop") {
+      margin-bottom: rem(32px);
+    }
+
+    label {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      font-size: rem(16px);
+      font-weight: 900;
+      text-transform: uppercase;
+
+      @include breakpoint("desktop") {
+        font-size: rem(24px);
+      }
+
+      svg {
+        font-size: rem(20px);
+        margin-right: rem(8px);
+
+        @include breakpoint("desktop") {
+          font-size: rem(28px);
+          margin-right: rem(12px);
+        }
+      }
+
+      .box {
+        align-items: center;
+        background: color("white");
+        border-radius: rem(4px);
+        display: flex;
+        height: rem(24px);
+        justify-content: center;
+        margin-right: rem(8px);
+        width: rem(24px);
+
+        @include breakpoint("desktop") {
+          height: rem(32px);
+          margin-right: rem(12px);
+          width: rem(32px);
+        }
+
+        svg {
+          color: color("white");
+          font-size: rem(16px);
+          margin: 0;
+
+          @include breakpoint("desktop") {
+            font-size: rem(24px);
+          }
+        }
+      }
+    }
+
+    input[type="checkbox"]:checked + label {
+      .box svg {
+        color: color("black");
+      }
+    }
+  }
+
+  .number-cards {
+    margin-bottom: rem(32px);
+    max-width: rem(120px);
+  }
+}
