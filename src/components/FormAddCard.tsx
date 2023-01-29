@@ -1,4 +1,4 @@
-import React, { useState, useId } from "react";
+import React, { useState, useEffect, useId } from "react";
 import { ICardType, ICardColor, ICardFlag, ICard } from "../utils/models";
 import { DEFAULT_CARD } from "../utils/defaults";
 import FieldCardColors from "./FieldCardColors";
@@ -20,6 +20,16 @@ export default function FormAddCard(props: IFormAddCardProps) {
     ...DEFAULT_CARD,
     number: 1,
   });
+
+  useEffect(() => {
+    if (props.type !== "type_land") {
+      setFields({
+        ...fields,
+        type_land: false,
+        [props.type]: true,
+      });
+    }
+  }, []);
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
