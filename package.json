@@ -1,11 +1,11 @@
 {
   "name": "mystical-dispute-rad-simulator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Mystical Dispute: R.A.D. Simulator",
   "main": "src/index.tsx",
   "author": {
     "name": "Garrett Gardner",
-    "email": "garrettgardner@gmail.com",
+    "email": "hello@garrett-gardner.com",
     "url": "https://garrett-gardner.com"
   },
   "devDependencies": {
@@ -16,6 +16,8 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "css-loader": "^6.7.1",
+    "ejs": "^3.1.8",
+    "fs-extra": "^11.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.57.1",
@@ -29,7 +31,8 @@
   "scripts": {
     "devclient": "webpack --watch",
     "devsass": "npx sass src/sass:dev/assets/stylesheets --watch",
-    "dev": "concurrently \"npm run devclient\" \"npm run devsass\"",
-    "build": "webpack --env env=prod && npx sass src/sass:dist/assets/stylesheets --style=compressed --no-source-map"
+    "devfiles": "node src/build/build.js",
+    "dev": "node src/build/build.js && concurrently \"npm run devclient\" \"npm run devsass\"",
+    "build": "node src/build/build.js production && webpack --env env=prod && npx sass src/sass:dist/assets/stylesheets --style=compressed --no-source-map"
   }
 }

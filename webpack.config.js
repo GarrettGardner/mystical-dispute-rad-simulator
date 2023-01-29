@@ -18,14 +18,14 @@ module.exports = (env) => {
           test: /\.tsx$/,
           exclude: /(node_modules|bower_components)/,
           use: {
-              loader: 'ts-loader'
+            loader: 'ts-loader'
           }
         },
         {
           test: /\.ts$/,
           exclude: /(node_modules|bower_components)/,
           use: {
-              loader: 'ts-loader'
+            loader: 'ts-loader'
           }
         }
       ]
@@ -34,9 +34,9 @@ module.exports = (env) => {
   };
 
   if (env.env == "prod") {
-      config["mode"] = "production";
-      config["devtool"] = false;
-      config["output"]["path"] = path.join(__dirname, 'dist/assets/javascript');
+    config["mode"] = "production";
+    config["devtool"] = false;
+    config["output"]["path"] = path.join(__dirname, 'dist/assets/javascript');
   }
 
   return config;

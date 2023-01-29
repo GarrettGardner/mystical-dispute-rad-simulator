@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="<%= PUBLIC_URL %>favicon.ico" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="<%= PUBLIC_URL %>assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="<%= PUBLIC_URL %>assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<%= PUBLIC_URL %>assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<%= PUBLIC_URL %>assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<%= PUBLIC_URL %>assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="<%= PUBLIC_URL %>assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="<%= PUBLIC_URL %>assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="<%= PUBLIC_URL %>assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= PUBLIC_URL %>assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="<%= PUBLIC_URL %>assets/icons/android-icon-192x192.png">
+
+  <title><%= TITLE %></title>
+
+  <meta name="apple-mobile-web-app-title" content="<%= TITLE %>" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="msapplication-TileColor" content="#3a255f" />
+  <meta name="theme-color" content="#3a255f" />
+
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= TITLE %>" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="<%= TITLE %>" />
+  <meta property="og:image" content="<%= PUBLIC_URL %>assets/images/mystical-dispute-social-card-1200x628.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="628" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="<%= DESCRIPTION %>" />
+  <meta name="twitter:title" content="<%= TITLE %>" />
+  <meta name="twitter:image" content="<%= PUBLIC_URL %>assets/images/mystical-dispute-social-card-1200x628.jpg" />
+
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <meta name="description" content="<%= DESCRIPTION %>" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C700%2C900" type="text/css" media="all" />
+
+  <% if (MODE == "production") { %>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NWSRCKLMBX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NWSRCKLMBX');
+  </script>
+  <% } %>
+
+  <link rel="stylesheet" href="<%= PUBLIC_URL %>assets/stylesheets/screen.css" type="text/css" />
+</head> 
+<body>
+  <div id="root"></div>
+  <script src="<%= PUBLIC_URL %>assets/javascript/app.js"></script>
+</body>
+</html>
