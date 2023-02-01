@@ -34,6 +34,10 @@ export default function SectionResults(props: ISectionResults) {
             label={`At most ${props.radChecks.opener.maxLand} Lands`}
           />
           <RadResult
+            total={CommonUtil.percent(props.radOutput.opener.bothLandSuccesses, props.radOutput.simulations)}
+            label={`Between ${props.radChecks.opener.minLand} and ${props.radChecks.opener.maxLand} Lands`}
+          />
+          <RadResult
             total={CommonUtil.percent(props.radOutput.opener.minPlayableSuccesses, props.radOutput.simulations)}
             label={`At least ${props.radChecks.opener.minPlayable} Plays (Early)`}
           />
@@ -59,6 +63,10 @@ export default function SectionResults(props: ISectionResults) {
           <RadResult
             total={CommonUtil.percent(props.radOutput.early.maxLandSuccesses, props.radOutput.simulations)}
             label={`At most ${props.radChecks.early.maxLand} Lands`}
+          />
+          <RadResult
+            total={CommonUtil.percent(props.radOutput.early.bothLandSuccesses, props.radOutput.simulations)}
+            label={`Between ${props.radChecks.early.minLand} and ${props.radChecks.early.maxLand} Lands`}
           />
           <RadResult
             total={CommonUtil.percent(props.radOutput.early.minPlayableSuccesses, props.radOutput.simulations)}
@@ -88,6 +96,10 @@ export default function SectionResults(props: ISectionResults) {
             label={`At most ${props.radChecks.mid.maxLand} Lands`}
           />
           <RadResult
+            total={CommonUtil.percent(props.radOutput.mid.bothLandSuccesses, props.radOutput.simulations)}
+            label={`Between ${props.radChecks.mid.minLand} and ${props.radChecks.mid.maxLand} Lands`}
+          />
+          <RadResult
             total={CommonUtil.percent(props.radOutput.mid.minPlayableSuccesses, props.radOutput.simulations)}
             label={`At least ${props.radChecks.mid.minPlayable} Plays (Early/Mid)`}
           />
@@ -113,6 +125,10 @@ export default function SectionResults(props: ISectionResults) {
           <RadResult
             total={CommonUtil.percent(props.radOutput.late.maxLandSuccesses, props.radOutput.simulations)}
             label={`At most ${props.radChecks.late.maxLand} Total Lands`}
+          />
+          <RadResult
+            total={CommonUtil.percent(props.radOutput.late.bothLandSuccesses, props.radOutput.simulations)}
+            label={`Between ${props.radChecks.late.minLand} and ${props.radChecks.late.maxLand} Lands`}
           />
           <RadResult
             total={CommonUtil.percent(props.radOutput.late.minPlayableSuccesses, props.radOutput.simulations)}

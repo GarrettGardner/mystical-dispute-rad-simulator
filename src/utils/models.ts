@@ -46,6 +46,7 @@ export interface IRadChecks {
 export interface IRadOutputStage {
   minLandSuccesses: number,
   maxLandSuccesses: number,
+  bothLandSuccesses: number,
   minPlayableSuccesses: number,
   minInteractionSuccesses: number,
   minBombSuccesses: number,
