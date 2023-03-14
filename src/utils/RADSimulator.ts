@@ -93,6 +93,10 @@ export class RADSimulator {
       radOutputStage.maxLandSuccesses++;
     }
 
+    if (landCount >= radChecksStage.minLand && landCount <= radChecksStage.maxLand) {
+      radOutputStage.bothLandSuccesses++;
+    }
+
     // Minimum Playables that are castable
     if (playableCount < radChecksStage.minPlayable) {
       success = false;
