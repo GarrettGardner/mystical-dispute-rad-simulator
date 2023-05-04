@@ -315,6 +315,7 @@ export const DEFAULT_RAD_OUTPUT: IRadOutput = {
   opener: {
     minLandSuccesses: 0,
     maxLandSuccesses: 0,
+    bothLandSuccesses: 0,
     minPlayableSuccesses: 0,
     minInteractionSuccesses: 0,
     minBombSuccesses: 0,
@@ -323,6 +324,7 @@ export const DEFAULT_RAD_OUTPUT: IRadOutput = {
   early: {
     minLandSuccesses: 0,
     maxLandSuccesses: 0,
+    bothLandSuccesses: 0,
     minPlayableSuccesses: 0,
     minInteractionSuccesses: 0,
     minBombSuccesses: 0,
@@ -331,6 +333,7 @@ export const DEFAULT_RAD_OUTPUT: IRadOutput = {
   mid: {
     minLandSuccesses: 0,
     maxLandSuccesses: 0,
+    bothLandSuccesses: 0,
     minPlayableSuccesses: 0,
     minInteractionSuccesses: 0,
     minBombSuccesses: 0,
@@ -339,6 +342,7 @@ export const DEFAULT_RAD_OUTPUT: IRadOutput = {
   late: {
     minLandSuccesses: 0,
     maxLandSuccesses: 0,
+    bothLandSuccesses: 0,
     minPlayableSuccesses: 0,
     minInteractionSuccesses: 0,
     minBombSuccesses: 0,
